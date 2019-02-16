@@ -1,10 +1,6 @@
-Introduction
-============
+# Introduction
 
-My method of quickly setting up a raspberry PI. I operate most of them headless and access them via SSH.
+This image was created to get Kafka up and running quickly on a Raspberry Pi3 or constrained hardware.
+A number of parameters are configurable using enviromental variables.
 
-Install Raspbian , update and setup SSH by going through raspi-config
-
-I prefer to use a static IP
-
-Install 
+Please note that Zookeeper is a required dependency.
