@@ -7,7 +7,7 @@ Please note that Zookeeper is a required dependency.
 ```
 
 
-docker run -it -v /<mount>:/kafka/data -p 9092:9092 -e BROKER_ID=<broker_id> -e ZK_CONNECT="<zk_host>:2181" -e ADVERTISED_LISTNERS="PLAINTEXT://<listner_host>:9092" alpine-kafka
+docker run -it -v /<mount>:/kafka/data -p 9092:9092 -e BROKER_ID=<broker_id> -e ZK_CONNECT="<zk_host>:2181" -e ADVERTISED_LISTNERS="PLAINTEXT://<listner_host>:9092" icemanaf/rpi-alpine-kafka
 
 
 ```
