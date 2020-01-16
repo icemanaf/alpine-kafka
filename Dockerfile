@@ -4,14 +4,14 @@ FROM alpine:latest
 RUN  apk add openjdk8  tar  wget bash
 
 #get kafka
-RUN wget -q http://apache.mirror.anlx.net/kafka/2.0.0/kafka_2.11-2.0.0.tgz && \
+RUN wget -q http://apache.mirror.anlx.net/kafka/2.4.0/kafka_2.13-2.4.0.tgz && \
 tar -xzvf kafka_2.11-2.0.0.tgz && \
 mv kafka_2.11-2.0.0 kafka && \
 rm -rf kafka_2.11-2.0.0.tgz
 
 #configurations
 ENV BROKER_ID=0
-ENV JMX_PORT=${JMX_PORT:-9999}
+ENV JMX_PORT=${JMX_PORT:-9910}
 ENV ADVERTISED_LISTNERS=localhost
 ENV ZK_CONNECT=localhost:2181
 ENV KAFKA_PORT=9092
