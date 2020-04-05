@@ -10,6 +10,7 @@ mv kafka_2.11-2.0.0 kafka && \
 rm -rf kafka_2.11-2.0.0.tgz
 
 #configurations
+ENV REPLICATION_FACTOR=1
 ENV BROKER_ID=0
 ENV JMX_PORT=${JMX_PORT:-9999}
 ENV ADVERTISED_LISTNERS=localhost
