@@ -1,4 +1,9 @@
 #!/bin/sh
+
+if [! -d "$KAFKA_DATA_DIR"]; then
+	mkdir -p ${KAFKA_DATA_DIR}
+fi
+
 sed -i "s!offsets.topic.replication.factor=1!offsets.topic.replication.factor=${REPLICATION_FACTOR}!g" /kafka/config/server.properties
 sed -i "s!transaction.state.log.replication.factor=1!transaction.state.log.replication.factor=${REPLICATION_FACTOR}!g" /kafka/config/server.properties
 sed -i "s!broker.id=0!broker.id=${BROKER_ID}!g" /kafka/config/server.properties
